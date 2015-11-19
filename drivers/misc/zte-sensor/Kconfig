@@ -24,6 +24,20 @@ config ZTE_SENSORS_ACCEL_LIS3DH
 	help
 	  If you say yes here, you just support st accel lis3dh
 
+config ZTE_SENSORS_ACCEL_MC3XXX
+   tristate "accel mc3xxx"
+   depends on I2C
+   select INPUT_POLLDEV
+   help
+      if you say yes here, you just support st accel mc3xxx
+
+config ZTE_SENSORS_ACCEL_BMA2XX
+   tristate "accel bma2xx"
+	depends on I2C
+   select INPUT_POLLDEV
+   help
+      if you say yes here, you just support st accel bma2xx
+
 config ZTE_SENSORS_COMPASS_AK8963
 	tristate "AK8963 compass support"
 	depends on I2C
@@ -38,4 +52,5 @@ config ZTE_SENSORS_COMPASS_AK09911
 	help
 	  If you say yes here you get support for Asahi Kasei's
 	  orientation sensor AK09911.
+
 endmenu
