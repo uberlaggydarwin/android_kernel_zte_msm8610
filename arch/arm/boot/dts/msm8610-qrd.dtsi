@@ -128,6 +128,28 @@
 			//st,negate-y;
 			//st,negate-z;
 		};
+		mc3xxx@4c {
+			compatible = "mc,mc3xxx";
+			reg = <0x4c>;
+			vdd-supply = <&pm8110_l19>;
+			vio-supply = <&pm8110_l14>;
+			gpio-irq-pin = <&msmgpio 81 0>;
+			mc,axis-map-x = <1>;
+			mc,axis-map-y = <0>;
+			mc,axis-map-z = <2>;
+			mc,negate-z;
+		};
+		bma2xx@18 {
+			compatible = "bcm,bma2xx";
+			reg = <0x18>;
+			//interrupt-parent = <&msmgpio>;
+			//interrupts = <81 0x2>;
+			vdd-supply = <&pm8110_l19>;
+			vio-supply = <&pm8110_l14>;
+			bma2xx,gpio-irq1 = <&msmgpio 81 0>;
+			bma2xx,gpio-irq2 = <&msmgpio 82 0>;
+			bma2xx,orientation = <6>;
+		};
 		taos@39 {
 			compatible = "taos,tmd277x";
 			reg = <0x39>;
