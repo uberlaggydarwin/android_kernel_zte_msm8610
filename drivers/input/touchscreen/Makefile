@@ -88,3 +88,4 @@ obj-$(CONFIG_TOUCHSCREEN_GT9XX)		+= gt9xx_zte/
 else
 obj-$(CONFIG_TOUCHSCREEN_GT9XX)		+= gt9xx/
 endif
+obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_MSG)		+= msg_21xx_selfcap.o
